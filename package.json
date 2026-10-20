@@ -1,0 +1,29 @@
+{
+  "name": "dsh-channel-credits",
+  "version": "0.1.1",
+  "private": true,
+  "type": "module",
+  "description": "输入框下方统计栏常驻显示渠道积分余额，每轮对话尾部回填本轮积分消耗（数据源 channel-pack usage.badge）",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": {
+      "optional": true
+    }
+  }
+}
